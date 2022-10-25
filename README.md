@@ -1,5 +1,6 @@
 # linked-lists
-A refresher on linked lists in Python.
+A refresher on linked lists in Python. Linked Lists weren't defined in python some years ago when I started my journey in 2.7x. Neither was the keyword 'class'. Here is an simple implementation
+to refresh what these look like- in python of course it's not! 
 
 Linked lists data uses the concept of nodes. Nodes are allocated in memory at runtime. In python we can say the linked list node can be found at its next value (next value might be a pointer). We may need to know where the head is at to start this process, and a tail's next for a singly linked list in python will be `None`. There may be a previous pointer for doubly linked lists, but we are looking just at singly linked lists right now. 
 
@@ -19,4 +20,4 @@ The append will create the first data element to the list.
 
 ## Gotchas
 
-'node' object has no attribute 'next' if we initialize with init and not __init__ .  Watch what you write!
+'node' object has no attribute 'next' if we initialize with 'init' and not __init__ .  Watch what you write! It will work and fail at runtime. See if you can figure out why the .ipynb file will not print_reversed.

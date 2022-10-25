@@ -13,7 +13,7 @@ Kite has better automatic documentation. This is just a test to see @how docstri
 #         self.val = x
 #         self.next = None
 
-class node:
+class Node:
     # we pass in a data point or element to be stored by a node
     # default for data is set to None
     # 'tail' should have next as None
@@ -26,10 +26,10 @@ class node:
 class linked_list:
     def __init__(self):
         # head has no data and is not indexable
-        self.head = node()
+        self.head = Node()
         print(f'created linked list with a head')
     def append(self, data):
-        new_node = node(data)
+        new_node = Node(data)
         cur = self.head # start at left most point in list
         # iterate over the list and find None- the last node in the list, in which to add to
         while cur.next != None:
@@ -66,6 +66,13 @@ class linked_list:
             eles.append(cur_node.data)
         print(f'eles: {eles}')
     
+    def print_reversed(node):
+        '''recursive call for last print first'''
+        if node.next == None: return
+        print_reversed(node.next)
+        print(f'val:{node.val}')
+        # else: no else on recursion, just call it
+
     def get(self, index):
         '''extract data at specific index we need the head & a way to know which index we're at
         :index: int: the position of the node is zero based
