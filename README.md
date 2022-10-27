@@ -20,4 +20,8 @@ The append will create the first data element to the list.
 
 ## Gotchas
 
-'node' object has no attribute 'next' if we initialize with 'init' and not __init__ .  Watch what you write! It will work and fail at runtime. See if you can figure out why the .ipynb file will not print_reversed.
+'node' object has no attribute 'next' if we initialize with 'init' and not __init__ .  Watch what you write! It will work and fail at runtime. 
+
+### Adding recursive features
+
+The .ipynb file has a print_reversed method. To write this function we need to know a few things about the nature of this linked list. First, when a node is created, it becomes the 'root' or 'head' node. What denotes this? The links are the self.next attributes in the linked list class
